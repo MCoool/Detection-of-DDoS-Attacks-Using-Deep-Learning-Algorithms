@@ -1,0 +1,27 @@
+<html >
+<head>
+  <title>DDoS Attack</title>  
+</head>
+
+<body>
+ <div>
+	<h1>Predict the DDoS Attack</h1>
+    Protocol: <br>
+    <input type="text" name="protocol" placeholder="Protocol" required="required" /><br>
+    <form action="{{ url_for('getprediction')}}"method="post">
+	<label for="time">Time: </label><br>
+    	<input type="text" name="time" placeholder="Time" required="required" /><br>
+	<label for="length">Length: </label><br>    
+	<input type="text" name="length" placeholder="Length" required="required" /><br><br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">getprediction</button>
+    </form>
+
+   <br>
+   <br>
+   {{ output }}
+
+ </div>
+
+
+</body>
+</html>
